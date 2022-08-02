@@ -33,11 +33,14 @@ const App = () => {
       <p>Weight : {pokemon.weight}</p>
       <p>Type :</p>
       <ul>
-        {pokemon.types.map((type) => (
-          <li>{type.type.name}</li>
-        ))}
+        <p>
+          {" "}
+          {pokemon.types.map((type) => (
+            <li key={type.type.name}>{type.type.name}</li>
+          ))}
+        </p>
       </ul>
-      <button onClick={randomPokemon}>Random</button>
+      <button onClick={randomPokemon}>Random Pokemon</button>
     </div>
   );
 };
